@@ -1,6 +1,7 @@
+
 from PySimpleGUI import PySimpleGUI as sg
 from pytube import YouTube
-#layout
+# layout
 sg.theme('DarkBrown1')
 layout = [
     [sg.Text('''ZTUBE''', font='Courier 19', pad=(230, 0))],
@@ -15,18 +16,18 @@ Depois digite o destino da pasta onde deve ser salvo o video ex: "C:\\Usuarios\D
     [sg.Text()],
     [sg.Text('''Escolha o formato para download: 
     ''')],
-    [sg.Checkbox('.mp4'),sg.Checkbox('.mp3')],
+    [sg.Checkbox('.mp4'), sg.Checkbox('.mp3')],
     [sg.Text('''\n''')],
     [sg.Button('Download', pad=(230, 0))],
     [sg.Text('''\n''')],
     [sg.Text('by leanz', font='Courier 9')]
 ]
 
-#janela
+# janela
 titulo = "Youtube Downloader"
 janela = sg.Window(titulo, layout, size=(580, 430), grab_anywhere=True)
 
-#eventos
+# eventos
 while True:
     eventos, valores = janela.read()
     if eventos == sg.WINDOW_CLOSED:
